@@ -1,6 +1,21 @@
+<!-- En este input el usuario añadirá un to do item. Muy importante aquí
+es el value que está atado a toDoItem que será utilizado para
+atrapar lo que sea que el usuario escriba desde el controller. -->
 {{input type="text" value=toDoItem}}
+
+<!-- El botón, al darle click, es el que va a activar la acción de addToDo que creará
+un nuevo record utilizando lo que el usuario escriba en el input -->
 <button {{action 'addToDo'}}>Add</button>
 
+<!-- Una vez se crea el record desde el controller, este each helper será
+el que desplazará los to do items como una lista justo debajo del input.
+En el route handler, el model hook devuelve todos los records encontrados
+y hace disponible en los templates los to do items.  -->
 {{#each model as |todo|}}
   <li>{{todo.name}} <a href="#" {{action 'deleteToDo' todo.id}}>X</a></li>
 {{/each}}
+
+<!-- Cabe destacar que además de aparecer los to do items, justo al lado aparece
+una X envuelta en un anchor tag, que al darle click, va a las acciones en
+el controller y utiliza la función de deleteToDo, que a su vez coge como parámetro
+el todo.id del to-do que esté con esa X (to-do específico) -->
