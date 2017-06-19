@@ -1,0 +1,8 @@
+{{input value=fruitToAdd}}
+<button {{action 'addFruit' fruitToAdd}}>Add fruit</button>
+
+{{#each fruits as |fruit|}}
+  <li>
+    {{fruit}}
+  </li>
+{{/each}}
