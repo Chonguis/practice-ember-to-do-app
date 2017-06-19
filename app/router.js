@@ -7,7 +7,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('to-do', {path: '/'});
+  //Escribirle el path / a este route creado por mi hace que el homepage
+  //sea este route. 
+  this.route('to-do', {path: '/'}, function() {
+    this.route('add');
+  });
 });
 
 export default Router;

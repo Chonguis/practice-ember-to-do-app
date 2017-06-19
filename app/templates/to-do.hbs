@@ -1,11 +1,13 @@
 <!-- En este input el usuario añadirá un to do item. Muy importante aquí
 es el value que está atado a toDoItem que será utilizado para
 atrapar lo que sea que el usuario escriba desde el controller. -->
-{{input type="text" value=toDoItem}}
+<!-- {{input type="text" value=toDoItem}} -->
+
+{{outlet}}
 
 <!-- El botón, al darle click, es el que va a activar la acción de addToDo que creará
 un nuevo record utilizando lo que el usuario escriba en el input -->
-<button {{action 'addToDo'}}>Add</button>
+<!-- <button>{{#link-to 'to-do.add'}}Add{{/link-to}}</button> -->
 
 <!-- Una vez se crea el record desde el controller, este each helper será
 el que desplazará los to do items como una lista justo debajo del input.
