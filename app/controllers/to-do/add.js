@@ -19,6 +19,8 @@ export default Ember.Controller.extend({
       });
       //Para salvar oficialmente el record:
       toDoItemRecord.save();
+
+      this.set('toDoItem', '')
     }
   }
 
