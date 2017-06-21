@@ -2,9 +2,60 @@
 ponerle el div container para que todo el outlet ya lo tenga. También
 se puede añadir el header y footer, el outlet estando en el medio.  -->
 
-<div>
-  {{#link-to 'to-do'}}Home{{/link-to}}
-  {{#link-to 'to-do.add'}}Add{{/link-to}}
-</div>
+<div class="container">
+  <div class="wrapper">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand text-uppercase" href="#">To-Do list <span class="label label-success text-capitalize">Add</span></a>
+          </div>
 
-{{outlet}}
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navigation">
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><button type="button" class="btn btn-success navbar-btn btn-circle">Sign in</button></li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 col-md-offset-1">
+            <div class="content">
+              <div class="pull-middle">
+                <h1 class="page-header">Chonguis Ember.js To-Do App</h1>
+                <p class="lead">Add to-do!</p>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form action="#" role="form">
+                            <div class="input-group">
+                                <!-- <input type="email" class="form-control" placeholder="Email Address" required>
+                                <span class="input-group-btn">
+                                  <button class="btn btn-success btn-circle" type="submit">Sign up for free</button>
+                                </span> -->
+                                {{#link-to 'to-do'}}Home {{/link-to}}
+                                {{#link-to 'to-do.add'}}Add{{/link-to}}
+                                <br>
+                                {{outlet}}
+                            </div>
+                        </form>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</header>
+</div>

@@ -1,0 +1,17 @@
+.header {
+    padding-top: 50px;
+    background-color: #eee;
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+    display: table;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.pull-middle {
+    display: table-cell;
+    vertical-align: middle;
+}
