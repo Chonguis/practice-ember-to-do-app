@@ -13,9 +13,11 @@ un nuevo record utilizando lo que el usuario escriba en el input -->
 el que desplazará los to do items como una lista justo debajo del input.
 En el route handler, el model hook devuelve todos los records encontrados
 y hace disponible en los templates los to do items.  -->
-<ol>
+<ol id="list">
   {{#each model as |todo|}}
-    <li>{{todo.name}} <a href="#" {{action 'deleteToDo' todo.id}}>X</a></li>
+    <div class="item">
+      <li><p>{{todo.name}} <a href="#" {{action 'deleteToDo' todo.id}}>X</a></p></li>
+    </div>
   {{/each}}
 </ol>
 

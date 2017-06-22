@@ -40,13 +40,10 @@ se puede añadir el header y footer, el outlet estando en el medio.  -->
                     <div class="panel-body">
                         <form action="#" role="form">
                             <div class="input-group">
-                                <!-- <input type="email" class="form-control" placeholder="Email Address" required>
-                                <span class="input-group-btn">
-                                  <button class="btn btn-success btn-circle" type="submit">Sign up for free</button>
-                                </span> -->
-                                {{#link-to 'to-do'}}Home {{/link-to}}
-                                {{#link-to 'to-do.add'}}Add{{/link-to}}
-                                <br>
+                              <ul class="list-inline">
+                                <li>{{#link-to 'to-do'}}<h4>Home</h4>{{/link-to}}</li>
+                                <li>{{#link-to 'to-do.add'}}Add{{/link-to}}</li>
+                              </ul>
                                 {{outlet}}
                             </div>
                         </form>

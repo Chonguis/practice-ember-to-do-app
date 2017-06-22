@@ -1,7 +1,10 @@
-{{input type="text" value=toDoItem class="form-control" placeholder="Add to-do"}}
+<div class="input-group">
+  {{input type="text" value=toDoItem class="form-control" placeholder="Add to-do"}}
+  <span class="input-group-btn">
+    <button {{action 'addToDo'}} class="btn btn-success btn-circle" type="submit">Add</button>
+  </span>
+</div>
 
-
-  <button {{action 'addToDo'}} class="btn btn-success btn-circle" type="submit">Add</button>
 
 
 
